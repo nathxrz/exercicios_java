@@ -45,7 +45,7 @@ public class Cliente implements Associado{
     }
 
     public double lucros(int qdeCotas, double valorCota){
-        return (qdeCotas*valorCota)/qdeCotas;
+        return qdeCotas*valorCota;
     }
 
     @Override
