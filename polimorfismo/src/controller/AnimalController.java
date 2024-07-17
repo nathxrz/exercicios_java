@@ -55,6 +55,10 @@ public class AnimalController {
                 animal.desenhar();
                 System.out.println(animal);
             }else if(animal instanceof Passaro){
+                //((Passaro) animal): Esta parte do código é um "downcast".
+                // Assume-se que animal é uma referência a um objeto do tipo Animal,
+                // mas na realidade é um Peixe. O cast (Peixe) está dizendo ao
+                // compilador para tratar animal como se fosse do tipo Peixe.
                 ((Passaro) animal).mover(5.0,5.0,5.0);
                 animal.desenhar();
                 System.out.println(animal);
