@@ -1,0 +1,10 @@
+model:
+
+1) atributos
+2) construtor padrão, parametrizado e modificado (super() em subclasses);
+3) getters and setters;
+4) métodos da superclasse e da interface (criar outro construtor com os novos atributos);
+5) atributos da interface;
+6) getters e setters dos atributos da interface;
+7) método aplicado na interface;
+8) toString;
