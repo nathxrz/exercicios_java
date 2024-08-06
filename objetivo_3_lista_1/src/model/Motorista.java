@@ -17,6 +17,12 @@ public class Motorista {
     public Motorista() {
     }
 
+    public Motorista(String nome, String email, String telefone) {
+        this.nome = nome;
+        this.email = email;
+        this.telefone = telefone;
+    }
+
     public String getNome() {
         return nome;
     }
@@ -39,6 +45,14 @@ public class Motorista {
 
     public void setTelefone(String telefone) {
         this.telefone = telefone;
+    }
+
+    public List<Corrida> getCorridas() {
+        return corridas;
+    }
+
+    public void setCorridas(List<Corrida> corridas) {
+        this.corridas = corridas;
     }
 
     @Override

@@ -23,12 +23,14 @@ public class Corrida{
     public Corrida() {
     }
 
-    public Corrida(BigDecimal valor, LocalDate dataInicio, LocalDate dataFim, FormaDePagamento formaDePagamento, Situacao situacao) {
+    public Corrida(BigDecimal valor, LocalDate dataInicio, LocalDate dataFim, FormaDePagamento formaDePagamento, Situacao situacao, Usuario usuario, Motorista motorista) {
         this.valor = valor;
         this.dataInicio = dataInicio;
         this.dataFim = dataFim;
         this.formaDePagamento = formaDePagamento;
         this.situacao = situacao;
+        this.usuario = usuario;
+        this.motorista = motorista;
     }
 
     public BigDecimal getValor() {

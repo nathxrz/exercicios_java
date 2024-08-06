@@ -17,8 +17,14 @@ public class Aluno {
         this.matricula = matricula;
         this.nome = nome;
         this.sobrenome = sobrenome;
-        this.disciplinas = disciplinas;
     }
+
+//    public Aluno(Long matricula, String nome, String sobrenome, List<Disciplina> disciplinas) {
+//        this.matricula = matricula;
+//        this.nome = nome;
+//        this.sobrenome = sobrenome;
+//        this.disciplinas = disciplinas;
+//    }
 
     public Long getMatricula() {
         return matricula;
@@ -54,11 +60,9 @@ public class Aluno {
 
     @Override
     public String toString() {
-        return "\nAluno{" +
-                "matricula=" + matricula +
-                ", nome='" + nome + '\'' +
-                ", sobrenome='" + sobrenome + '\'' +
-                ", disciplinas=" + disciplinas +
-                '}';
+        return "\nInformações do aluno:" +
+                "\n- Matrícula: " + matricula +
+                "\n- Nome: " + nome + " " + sobrenome +
+                "\n- Disciplinas: " + disciplinas;
     }
 }

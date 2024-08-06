@@ -20,6 +20,13 @@ public class Empresa {
         this.cnpj = cnpj;
     }
 
+//    public Empresa(String nomeFantasia, String razaoSocial, String cnpj, List<Funcionario> funcionarios) {
+//        this.nomeFantasia = nomeFantasia;
+//        this.razaoSocial = razaoSocial;
+//        this.cnpj = cnpj;
+//        this.funcionarios = funcionarios;
+//    }
+
     public String getCnpj() {
         return cnpj;
     }
@@ -54,11 +61,10 @@ public class Empresa {
 
     @Override
     public String toString() {
-        return "\nEmpresa{" +
-                "cnpj='" + cnpj + '\'' +
-                ", razaoSocial='" + razaoSocial + '\'' +
-                ", nomeFantasia='" + nomeFantasia + '\'' +
-                ", funcionarios=" + funcionarios +
+        return "- CNPJ: " + cnpj +
+                "\n- Nome: '" + nomeFantasia + "'" +
+                "\n- Razão Social: '" + razaoSocial + "'" +
+                "\n- Funcionários: " + funcionarios +
                 '}';
     }
 }

@@ -29,9 +29,6 @@ public class Disciplina {
 
     @Override
     public String toString() {
-        return "\nDisciplina{" +
-                "codigo=" + codigo +
-                ", nome='" + nome + '\'' +
-                '}';
+        return "\n   - [" + codigo + "] " + nome;
     }
 }

@@ -61,12 +61,6 @@ public class Funcionario {
 
     @Override
     public String toString() {
-        return "\nFuncionario{" +
-                "id=" + id +
-                ", cpf='" + cpf + '\'' +
-                ", nome='" + nome + '\'' +
-                ", sobrenome='" + sobrenome + '\'' +
-                ", dataNascimento=" + dataNascimento +
-                '}';
+        return "\n   - [" + id + "] " + nome + " " + sobrenome + " | " + cpf + " | " + dataNascimento;
     }
 }
