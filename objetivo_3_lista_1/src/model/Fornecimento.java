@@ -15,10 +15,12 @@ public class Fornecimento {
     public Fornecimento() {
     }
 
-    public Fornecimento(LocalDateTime data, Integer quantidade, BigDecimal total) {
+    public Fornecimento(LocalDateTime data, Integer quantidade, BigDecimal total, Fornecedor fornecedor, Produto produto) {
         this.data = data;
         this.quantidade = quantidade;
         this.total = total;
+        this.fornecedor = fornecedor;
+        this.produto = produto;
     }
 
     public LocalDateTime getData() {
@@ -63,12 +65,11 @@ public class Fornecimento {
 
     @Override
     public String toString() {
-        return "\nFornecimento{" +
-                "data=" + data +
-                ", quantidade=" + quantidade +
+        return "\n- Fornecimento: " +
+                "data = " + data +
+                ", quantidade = " + quantidade +
                 ", total=" + total +
-                ", fornecedor=" + fornecedor +
-                ", produto=" + produto +
-                '}';
+                "\n    - Fornecedor: " + fornecedor +
+                "\n    - Produto: " + produto ;
     }
 }

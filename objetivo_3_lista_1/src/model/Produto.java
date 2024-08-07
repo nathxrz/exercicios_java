@@ -86,14 +86,12 @@ public class Produto {
 
     @Override
     public String toString() {
-        return "\nProduto{" +
-                "sku='" + sku + '\'' +
-                ", nome='" + nome + '\'' +
-                ", descricao='" + descricao + '\'' +
-                ", quantidade=" + quantidade +
-                ", precoDeCusto=" + precoDeCusto +
-                ", precoDeVenda=" + precoDeVenda +
-                ", fornecedores=" + fornecedores +
-                '}';
+        return  "sku = '" + sku + '\'' +
+                ", nome = '" + nome + '\'' +
+                ", descrição = '" + descricao + '\'' +
+                ", quantidade = " + quantidade +
+                ", preço de custo = " + precoDeCusto +
+                ", preço de venda = " + precoDeVenda +
+                ", fornecedores = " + fornecedores;
     }
 }

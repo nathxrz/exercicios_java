@@ -11,7 +11,7 @@ public class Fornecedor {
     private String telefone;
 
     //ligando Fornecedor x Produto
-    private List<Fornecedor> fornecedores =  new ArrayList<Fornecedor>();
+    private List<Produto> produtos =  new ArrayList<Produto>();
 
     public Fornecedor() {}
 
@@ -63,23 +63,21 @@ public class Fornecedor {
         this.telefone = telefone;
     }
 
-    public List<Fornecedor> getFornecedores() {
-        return fornecedores;
+    public List<Produto> getProdutos() {
+        return produtos;
     }
 
-    public void setFornecedores(List<Fornecedor> fornecedores) {
-        this.fornecedores = fornecedores;
+    public void setProdutos(List<Produto> produtos) {
+        this.produtos = produtos;
     }
 
     @Override
     public String toString() {
-        return "\nFornecedor{" +
-                "cnpj=" + cnpj +
-                ", razaoSocial='" + razaoSocial + '\'' +
-                ", nomeFantasia='" + nomeFantasia + '\'' +
-                ", email='" + email + '\'' +
-                ", telefone='" + telefone + '\'' +
-                ", fornecedores=" + fornecedores +
-                '}';
+        return  "cnpj = " + cnpj +
+                ", razão sozial = '" + razaoSocial + '\'' +
+                ", nome = '" + nomeFantasia + '\'' +
+                ", email = '" + email + '\'' +
+                ", telefone = '" + telefone + '\'' +
+                ", produtos = " + produtos;
     }
 }

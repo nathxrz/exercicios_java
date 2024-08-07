@@ -91,7 +91,7 @@ public class Corrida{
 
     @Override
     public String toString() {
-        return "\nCorrida{" +
+        return "Corrida{" +
                 "valor=" + valor +
                 ", dataInicio=" + dataInicio +
                 ", dataFim=" + dataFim +
@@ -99,6 +99,6 @@ public class Corrida{
                 ", situacao=" + situacao +
                 ", usuario=" + usuario +
                 ", motorista=" + motorista +
-                '}';
+                "}\n";
     }
 }
