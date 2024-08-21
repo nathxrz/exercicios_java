@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Lista_1/Lista_1.iml" filepath="$PROJECT_DIR$/Lista_1/Lista_1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Lista_2/Lista_2.iml" filepath="$PROJECT_DIR$/Lista_2/Lista_2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/avaliacao_1_e_2/avaliacao_1_e_2.iml" filepath="$PROJECT_DIR$/avaliacao_1_e_2/avaliacao_1_e_2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/exercicios_java-master.iml" filepath="$PROJECT_DIR$/.idea/exercicios_java-master.iml" />
+      <module fileurl="file://$PROJECT_DIR$/heranca_multipla_1/heranca_multipla_1.iml" filepath="$PROJECT_DIR$/heranca_multipla_1/heranca_multipla_1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/heranca_multipla_2/heranca_multipla_2.iml" filepath="$PROJECT_DIR$/heranca_multipla_2/heranca_multipla_2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/heranca_simples/heranca_simples.iml" filepath="$PROJECT_DIR$/heranca_simples/heranca_simples.iml" />
+      <module fileurl="file://$PROJECT_DIR$/objetivo_3_associacao_classe_agregacao/objetivo_3_associacao_classe_agregacao.iml" filepath="$PROJECT_DIR$/objetivo_3_associacao_classe_agregacao/objetivo_3_associacao_classe_agregacao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/objetivo_3_lista_1/objetivo_3_lista_1.iml" filepath="$PROJECT_DIR$/objetivo_3_lista_1/objetivo_3_lista_1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/objetivo_3_outras_associacoes_classes/objetivo_3_outras_associacoes_classes.iml" filepath="$PROJECT_DIR$/objetivo_3_outras_associacoes_classes/objetivo_3_outras_associacoes_classes.iml" />
+      <module fileurl="file://$PROJECT_DIR$/objetivo_preparario_3_e_4/objetivo_preparario_3_e_4.iml" filepath="$PROJECT_DIR$/objetivo_preparario_3_e_4/objetivo_preparario_3_e_4.iml" />
+      <module fileurl="file://$PROJECT_DIR$/objetivo_preparatorio_1/objetivo_preparatorio_1.iml" filepath="$PROJECT_DIR$/objetivo_preparatorio_1/objetivo_preparatorio_1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/objetivo_preparatorio_2/objetivo_preparatorio_2.iml" filepath="$PROJECT_DIR$/objetivo_preparatorio_2/objetivo_preparatorio_2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/polimorfismo/polimorfismo.iml" filepath="$PROJECT_DIR$/polimorfismo/polimorfismo.iml" />
+    </modules>
+  </component>
+</project>
