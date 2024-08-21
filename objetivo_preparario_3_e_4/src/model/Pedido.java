@@ -21,12 +21,13 @@ public class Pedido {
 
     }
 
-    public Pedido(String numero, LocalDate data, BigDecimal total, Estado estado, List<Item> itens) {
+    public Pedido(String numero, LocalDate data, BigDecimal total, Estado estado, List<Item> itens, Vendedor vendedor) {
         this.numero = numero;
         this.data = data;
         this.total = total;
         this.estado = estado;
         this.itens = itens;
+        this.vendedor = vendedor;
     }
 
     public String getNumero() {
