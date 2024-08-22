@@ -55,10 +55,10 @@ public class Item {
 
     @Override
     public String toString() {
-        return "Item{" +
+        return "\nItem{" +
                 "quantidade=" + quantidade +
                 ", situacao=" + situacao +
-                ", produto=" + produto +
+//                ", produto=" + produto +
                 ", total=" + total +
                 '}';
     }

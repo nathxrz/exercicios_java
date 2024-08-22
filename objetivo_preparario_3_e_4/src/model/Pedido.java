@@ -80,10 +80,10 @@ public class Pedido {
 
     @Override
     public String toString() {
-        return "Pedido{" +
+        return "\nPedido{" +
                 "numero='" + numero + '\'' +
-                ", data=" + data +
-                ", valor=" + total +
+                ", data=" + data+
+                ", Total=" + total +
                 ", estado=" + estado +
                 ", itens=" + itens +
                 ", vendedor=" + vendedor +

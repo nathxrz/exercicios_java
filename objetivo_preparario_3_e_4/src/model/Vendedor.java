@@ -48,7 +48,7 @@ public class Vendedor extends Funcionario{
 
     @Override
     public String toString() {
-        return "Vendedor{" +
+        return "\nVendedor{" +
                 "taxaDeComissao=" + taxaDeComissao +
                 ", regiao=" + regiao +
                 ", pedidos=" + pedidos +

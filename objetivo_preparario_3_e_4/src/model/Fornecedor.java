@@ -10,7 +10,7 @@ public class Fornecedor {
     private String telefone;
 
     //ligando Fornecedor com Produto
-    private List<Produto> produtos = new ArrayList<>();
+    private List<Produto> produtos;
 
     public Fornecedor() {
     }
@@ -20,7 +20,7 @@ public class Fornecedor {
         this.razaoSocial = razaoSocial;
         this.email = email;
         this.telefone = telefone;
-        this.produtos = produtos;
+        this.produtos = new ArrayList<>();
     }
 
     public String getCnpj() {
@@ -65,7 +65,7 @@ public class Fornecedor {
 
     @Override
     public String toString() {
-        return "Fornecedor{" +
+        return "\nFornecedor{" +
                 "cnpj='" + cnpj + '\'' +
                 ", razaoSocial='" + razaoSocial + '\'' +
                 ", email='" + email + '\'' +

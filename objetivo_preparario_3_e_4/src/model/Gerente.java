@@ -34,7 +34,7 @@ public class Gerente extends Funcionario{
 
     @Override
     public String toString() {
-        return "Gerente{" +
+        return "\nGerente{" +
                 "taxaDeBonificacao=" + taxaDeBonificacao +
                 ", filial=" + filial +
                 ", matricula=" + matricula +

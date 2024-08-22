@@ -13,16 +13,27 @@ public class Produto {
     private BigDecimal precoDeVenda;
 
     //ligando Produto com Item
-    private List<Item> itens = new ArrayList<>();
+    private List<Item> itens;
 
     //ligando Produto com Fornecedor
-    private List<Fornecedor> fornecedores = new ArrayList<>();
+    private List<Fornecedor> fornecedores;
 
     public Produto() {
 
     }
 
     public Produto(String sku, String nome, String descricao, Integer estoque, BigDecimal precoDeCusto, BigDecimal precoDeVenda, List<Item> itens, List<Fornecedor> fornecedores) {
+        this.sku = sku;
+        this.nome = nome;
+        this.descricao = descricao;
+        this.estoque = estoque;
+        this.precoDeCusto = precoDeCusto;
+        this.precoDeVenda = precoDeVenda;
+        this.itens = new ArrayList<>();
+        this.fornecedores = new ArrayList<>();
+    }
+
+    public Produto(String sku, String nome, String descricao, Integer estoque, BigDecimal precoDeCusto, BigDecimal precoDeVenda, List<Item> itens) {
         this.sku = sku;
         this.nome = nome;
         this.descricao = descricao;
@@ -99,7 +110,7 @@ public class Produto {
 
     @Override
     public String toString() {
-        return "Produto{" +
+        return "\nProduto{" +
                 "sku='" + sku + '\'' +
                 ", nome='" + nome + '\'' +
                 ", descricao='" + descricao + '\'' +
