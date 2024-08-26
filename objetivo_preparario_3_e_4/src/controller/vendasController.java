@@ -1,5 +1,6 @@
 package controller;
 
+import exception.EstoqueInsuficiente;
 import model.*;
 
 import java.math.BigDecimal;
@@ -22,7 +23,7 @@ public class vendasController {
         Fornecedor fornecedor2 = new Fornecedor("52343YJ545", "Mundo das canetas", "mdcanetas@email.com", "(31) 53212312");
 
         Produto p1 = new Produto(UUID.randomUUID().toString(), "Caderno", "200 folhas x 10 matérias", 200, new BigDecimal(20), new BigDecimal(40), List.of(fornecedor1, fornecedor2));
-        Produto p2 = new Produto(UUID.randomUUID().toString(), "Lápis", "nº4", 400, BigDecimal.valueOf(0.50), new BigDecimal(2), List.of(fornecedor1));
+        Produto p2 = new Produto(UUID.randomUUID().toString(), "Lápis", "nº4", 100, BigDecimal.valueOf(0.50), new BigDecimal(2), List.of(fornecedor1));
         Produto p3 = new Produto(UUID.randomUUID().toString(), "Caneta", "Azul", 250, BigDecimal.valueOf(1.50), new BigDecimal(3), List.of(fornecedor2));
         Produto p4 = new Produto(UUID.randomUUID().toString(), "Caneta", "Preta", 250, BigDecimal.valueOf(1.50), new BigDecimal(3), List.of(fornecedor1, fornecedor2));
 
@@ -55,6 +56,13 @@ public class vendasController {
         System.out.println("Número do pedido: " + pedido1.getNumero());
         System.out.println("Total: " + NumberFormat.getCurrencyInstance().format(pedido1.getValor()));
         System.out.println("Data da compra: " + pedido1.getData());
+
+        try { //tenta executar
+            Produto.baixarEstoqueComException(itens); //vai lança a exceção aqui, antes de registrar um pedido
+        } catch (EstoqueInsuficiente e) { //se lançar uma exceção a captura aqui
+            e.printStackTrace(); //imprime a pilha de exceção
+        }
+
 
     //  iii. Baixar o estoque de Produto
         Produto.baixaEstoque(itens);
@@ -116,17 +124,45 @@ public class vendasController {
         System.out.println("Total de vendas: " + NumberFormat.getCurrencyInstance().format(totalVendas));
 
     //  -------------------------------- G --------------------------------
+
     //  Faça o programa realizar a entrada de produtos no estoque. Garanta que o programa registre, o Fornecedor, o Fornecimento, e o Produto,
     //  em como, atualize o estoque. Imprima a nova posição de estoque;
+        Fornecimento fornecimento1 = new Fornecimento(LocalDate.now(), 150, new BigDecimal(150).multiply(p1.getPrecoDeCusto()), p1, fornecedor1);
+        Produto.atualizaEstoque(fornecimento1);
 
-        Fornecimento fornecimento1 = new Fornecimento(LocalDate.now(), 100, new BigDecimal(100).multiply(p1.getPrecoDeCusto()), p1, fornecedor1);
-        Fornecimento fornecimento2 = new Fornecimento(LocalDate.now(), 150, new BigDecimal(150).multiply(p2.getPrecoDeCusto()), p2, fornecedor1);
+        Fornecimento fornecimento2 = new Fornecimento(LocalDate.now(), 200, new BigDecimal(200).multiply(p2.getPrecoDeCusto()), p2, fornecedor1);
+        Produto.atualizaEstoque(fornecimento2);
+
+        System.out.print("\n-------------------------- Atualização dos estoques --------------------------\n");
+        System.out.println("Produto: " + fornecimento1.getProduto().getNome() + "\nEstoque atual: " + fornecimento1.getProduto().getEstoque());
+        System.out.println("Produto: " + fornecimento2.getProduto().getNome() + "\nEstoque atual: " + fornecimento2.getProduto().getEstoque());
 
 
+    //  -------------------------------- G --------------------------------
 
+    //  Faça o programa registrar os fornecimentos em uma coleção de Fornecimento. Depois, faça o programa imprimir o Relatório de Fornecimentos, isto é, todos os fornecimentos
+    //  realizados, bem como, o total fornecido;
 
+        List<Fornecimento> fornecimentos = new ArrayList<>();
+        fornecimentos.add(fornecimento1);
+        fornecimentos.add(fornecimento2);
 
+    //  -------------------------------- i --------------------------------
 
+        BigDecimal totalCompra = new BigDecimal(0);
+        for (Fornecimento fornecimento : fornecimentos){
+            totalCompra = totalCompra.add(fornecimento.getTotal());
+        }
+
+        System.out.print("\n-------------------------- Fornecimentos realizados --------------------------\n");
+        System.out.println(fornecimentos);
+        System.out.println("Total comprado: " + NumberFormat.getCurrencyInstance().format(totalCompra));
+
+    //  -------------------------------- i --------------------------------
+
+    //  Crie uma classe de Exceção, a classe EstoqueInsuficiente, que emita a seguinte mensagem
+    //  de exceção “Estoque Insuficiente”, e faça o programa lançar essa exceção, ao baixar o
+    //  estoque, toda vez que a quantidade de produto for insuficiente.
 
 
     }
