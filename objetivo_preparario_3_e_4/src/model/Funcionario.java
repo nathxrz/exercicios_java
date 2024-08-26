@@ -2,7 +2,7 @@ package model;
 
 import java.math.BigDecimal;
 
-public class Funcionario {
+public abstract class Funcionario {
     protected Long matricula;
     protected String nomeCompleto;
     protected String email;

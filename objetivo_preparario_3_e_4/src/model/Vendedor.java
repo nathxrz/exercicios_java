@@ -15,6 +15,12 @@ public class Vendedor extends Funcionario{
         super();
     }
 
+    public Vendedor(Long id, String nome, String email, String telefone, BigDecimal salario, double taxaDeComissao, Regiao regiao) {
+        super(id, nome, email, telefone, salario);
+        this.taxaDeComissao = taxaDeComissao;
+        this.regiao = regiao;
+    }
+
     public Vendedor(Long id, String nome, String email, String telefone, BigDecimal salario, double taxaDeComissao, Regiao regiao, List<Pedido> pedidos) {
         super(id, nome, email, telefone, salario);
         this.taxaDeComissao = taxaDeComissao;
@@ -51,12 +57,12 @@ public class Vendedor extends Funcionario{
         return "\nVendedor{" +
                 "taxaDeComissao=" + taxaDeComissao +
                 ", regiao=" + regiao +
-                ", pedidos=" + pedidos +
                 ", matricula=" + matricula +
                 ", nomeCompleto='" + nomeCompleto + '\'' +
                 ", email='" + email + '\'' +
                 ", telefone='" + telefone + '\'' +
                 ", salario=" + salario +
+//                ", pedidos=" + pedidos +
                 '}';
     }
 }

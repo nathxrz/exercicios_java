@@ -12,35 +12,20 @@ public class Produto {
     private BigDecimal precoDeCusto;
     private BigDecimal precoDeVenda;
 
-    //ligando Produto com Item
-    private List<Item> itens;
-
     //ligando Produto com Fornecedor
-    private List<Fornecedor> fornecedores;
+    private List<Fornecedor> fornecedores = new ArrayList<>();
 
     public Produto() {
 
     }
 
-    public Produto(String sku, String nome, String descricao, Integer estoque, BigDecimal precoDeCusto, BigDecimal precoDeVenda, List<Item> itens, List<Fornecedor> fornecedores) {
+    public Produto(String sku, String nome, String descricao, Integer estoque, BigDecimal precoDeCusto, BigDecimal precoDeVenda, List<Fornecedor> fornecedores) {
         this.sku = sku;
         this.nome = nome;
         this.descricao = descricao;
         this.estoque = estoque;
         this.precoDeCusto = precoDeCusto;
         this.precoDeVenda = precoDeVenda;
-        this.itens = new ArrayList<>();
-        this.fornecedores = new ArrayList<>();
-    }
-
-    public Produto(String sku, String nome, String descricao, Integer estoque, BigDecimal precoDeCusto, BigDecimal precoDeVenda, List<Item> itens) {
-        this.sku = sku;
-        this.nome = nome;
-        this.descricao = descricao;
-        this.estoque = estoque;
-        this.precoDeCusto = precoDeCusto;
-        this.precoDeVenda = precoDeVenda;
-        this.itens = itens;
         this.fornecedores = fornecedores;
     }
 
@@ -92,20 +77,22 @@ public class Produto {
         this.precoDeVenda = precoDeVenda;
     }
 
-    public List<Item> getItens() {
-        return itens;
-    }
-
-    public void setItens(List<Item> itens) {
-        this.itens = itens;
-    }
-
     public List<Fornecedor> getFornecedores() {
         return fornecedores;
     }
 
     public void setFornecedores(List<Fornecedor> fornecedores) {
         this.fornecedores = fornecedores;
+    }
+
+    public static void baixaEstoque(List<Item> itens){
+        itens.forEach(i -> {
+            if(i.getProduto().getEstoque() >= i.getQuantidade()) { //se tem estoque faz a baixa
+                i.getProduto().setEstoque(i.getProduto().getEstoque() - i.getQuantidade());
+            }else {
+                System.out.println("ALERTA: A quantidade do produto " + i.getProduto().nome + " (" + i.getProduto().descricao +  ") excedeu o estoque!");
+            }
+        });
     }
 
     @Override
@@ -117,8 +104,7 @@ public class Produto {
                 ", estoque=" + estoque +
                 ", precoDeCusto=" + precoDeCusto +
                 ", precoDeVenda=" + precoDeVenda +
-                ", itens=" + itens +
-                ", fornecedores=" + fornecedores +
+//                ", fornecedores=" + fornecedores +
                 '}';
     }
 }

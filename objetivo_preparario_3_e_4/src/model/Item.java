@@ -58,8 +58,8 @@ public class Item {
         return "\nItem{" +
                 "quantidade=" + quantidade +
                 ", situacao=" + situacao +
-//                ", produto=" + produto +
                 ", total=" + total +
+                ", produto=" + produto +
                 '}';
     }
 }

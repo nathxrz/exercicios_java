@@ -2,6 +2,7 @@ package model;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -11,10 +12,10 @@ public class Pedido {
     private BigDecimal total;
     private Estado estado;
 
-    //ligando Produto com Item
+    //ligando Pedido com Item
     private List<Item> itens = new ArrayList<>();
 
-    //ligando Produto com Vendedor
+    //ligando Pedido com Vendedor
     private Vendedor vendedor;
 
     public Pedido(){
@@ -38,8 +39,8 @@ public class Pedido {
         this.numero = numero;
     }
 
-    public LocalDate getData() {
-        return data;
+    public String getData() {
+        return data.format(DateTimeFormatter.ofPattern("dd/MM/yyyy"));
     }
 
     public void setData(LocalDate data) {
@@ -82,7 +83,7 @@ public class Pedido {
     public String toString() {
         return "\nPedido{" +
                 "numero='" + numero + '\'' +
-                ", data=" + data+
+                ", data=" + data.format(DateTimeFormatter.ofPattern("dd/MM/yyyy")) +
                 ", Total=" + total +
                 ", estado=" + estado +
                 ", itens=" + itens +

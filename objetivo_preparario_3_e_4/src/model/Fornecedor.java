@@ -10,9 +10,16 @@ public class Fornecedor {
     private String telefone;
 
     //ligando Fornecedor com Produto
-    private List<Produto> produtos;
+    private List<Produto> produtos = new ArrayList<>();
 
     public Fornecedor() {
+    }
+
+    public Fornecedor(String cnpj, String razaoSocial, String email, String telefone) {
+        this.cnpj = cnpj;
+        this.razaoSocial = razaoSocial;
+        this.email = email;
+        this.telefone = telefone;
     }
 
     public Fornecedor(String cnpj, String razaoSocial, String email, String telefone, List<Produto> produtos) {
@@ -20,7 +27,7 @@ public class Fornecedor {
         this.razaoSocial = razaoSocial;
         this.email = email;
         this.telefone = telefone;
-        this.produtos = new ArrayList<>();
+        this.produtos = produtos;
     }
 
     public String getCnpj() {
