@@ -22,8 +22,8 @@ public class Fornecimento {
         this.fornecedor = fornecedor;
     }
 
-    public String getData() {
-        return data.format(DateTimeFormatter.ofPattern("dd/MM/yyyy"));
+    public LocalDate getData() {
+        return data;
     }
 
     public void setData(LocalDate data) {

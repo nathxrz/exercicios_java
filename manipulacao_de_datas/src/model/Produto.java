@@ -101,7 +101,7 @@ public class Produto {
                 ", quantidade=" + quantidade +
                 ", precoDeCusto=" + precoDeCusto +
                 ", precoDeVenda=" + precoDeVenda +
-                ", fornecedores=" + fornecedores +
+//                ", fornecedores=" + fornecedores +
                 '}';
     }
 }
